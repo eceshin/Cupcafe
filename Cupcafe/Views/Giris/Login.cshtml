@@ -1,0 +1,39 @@
+﻿@model CupCafe.Service.DTO.LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+
+<body class="login">
+    <img src="https://i.hizliresim.com/qmzk2v5.png" class="footer__bg-img" />
+   <div class="center">
+       <h1>CupCafe</h1>
+
+        <form method="post" action="/Giris/Login">
+            <div class="txt_field">
+               <input type="text" name="Email" required />
+               <label>Mail</label>
+           </div>
+            <div class="txt_field">
+                <input type="password" name="Sifre" required />
+                <label>Şifre</label>
+            </div>
+            <div class="pass">Şifremi Unuttum</div>
+            <input type="submit" name="" value="Giris" />
+            <div class="signup_link">
+                <a href="~/AnaSayfa/AnaSayfa" >
+                    Üye Ol
+                </a>
+      </div>
+        </form>
+   </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cupcafe", "Cupcafe\Cupcafe.csproj", "{DDE54DD2-2A93-4024-B14B-6D711A2C480A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CupCafe.Service", "CupCafe.Service\CupCafe.Service.csproj", "{9DC38FFE-8BE6-404A-8223-F8976B800E33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDE54DD2-2A93-4024-B14B-6D711A2C480A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE54DD2-2A93-4024-B14B-6D711A2C480A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE54DD2-2A93-4024-B14B-6D711A2C480A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE54DD2-2A93-4024-B14B-6D711A2C480A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DC38FFE-8BE6-404A-8223-F8976B800E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DC38FFE-8BE6-404A-8223-F8976B800E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DC38FFE-8BE6-404A-8223-F8976B800E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DC38FFE-8BE6-404A-8223-F8976B800E33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {176A4ABC-C857-478A-BFB2-1DDD8D4AA283}
+	EndGlobalSection
+EndGlobal

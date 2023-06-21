@@ -1,0 +1,45 @@
+﻿const scrollHeader = () => {
+    const header = document.getElementById('header')
+    // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+    this.scrollY >= 50 ? header.classList.add('scroll-header')
+        : header.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
+
+
+
+const sections = document.querySelectorAll('section[id]')
+
+const scrollActive = () => {
+	const scrollY = window.pageYOffset
+
+	sections.forEach(current => {
+		const sectionHeight = current.offsetHeight,
+			sectionTop = current.offsetTop - 58,
+			sectionId = current.getAttribute('id'),
+			sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+
+		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+			sectionsClass.classList.add('active-link')
+		} else {
+			sectionsClass.classList.remove('active-link')
+		}
+	})
+}
+window.addEventListener('scroll', scrollActive)
+
+
+const sr = ScrollReveal({
+	origin: 'top',
+	distance: '60px',
+	duration: 2500,
+	delay: 400,
+	reset:400,
+})
+
+sr.reveal('.home__data, .products__data, .steps__content,.footer__container')
+sr.reveal('.home__img', { origin:'bottom' })
+sr.reveal('.products__card', { interval: 100 })
+r.reveal('.about__img, .testimonail__img', { origin: 'right' })
+r.reveal('.about__data, .testimonail__data', { origin: 'left' })
+

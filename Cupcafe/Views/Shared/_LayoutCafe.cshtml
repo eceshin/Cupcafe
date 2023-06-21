@@ -1,0 +1,140 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, " />
+
+    <link rel="shortcut icon" href="" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link href="~/css/style.css" rel="stylesheet" />
+    <title>CupCafe</title>
+</head>
+<body>
+
+    <header class="header" id="header">
+
+        <div class="header__border">
+        </div>
+
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="https://i.hizliresim.com/ijrt8xd.png" alt="logo" />
+
+                CupCafe
+            </a>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="ri-home-5-fill"></i>
+                            <span>
+                                Giriş
+                            </span>
+                        </a>
+                    </li>
+                   
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link active-link">
+                            <i class="ri-award-fill"></i>
+
+                            <span>
+                                Hakkımızda
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#steps" class="nav__link active-link">
+                            <i class="ri-compass-3-line"></i>
+                            <span>
+                                Üretim
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#footer" class="nav__link active-link">
+                            <i class="ri-login-box-fill"></i>
+                            <span>
+                                Üye Ol
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        @RenderBody();
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="footer__bg">
+            <img src="https://i.hizliresim.com/qmzk2v5.png" class="footer__bg-img" />
+            <div class="footer__container container grid">
+            <div class="footer__data grid">
+                <div>
+                        <a href="" class="footer__logo">
+                            <img src="https://i.hizliresim.com/ijrt8xd.png" />
+                   CupCafe
+                        </a>
+                        <h3 class="footer__title">
+                            Yönetici olmak için üye olun
+                        </h3>
+                </div>
+
+                    <form id="kullaniciForm" action="" class="footer__form grid">
+                        <input type="email" id="Email" name="email" placeholder="Email Adresi" class="footer__input">
+                        <input type="text" id="Sifre" name="sifre" placeholder="Şifre" class="footer__input">
+
+                        <a href="/Giris/Login" onclick="kullaniciEkle()">
+                            <div class="button footer__button" type="submit">
+                                Üye Ol <i class="ri-arrow-drop-right-line"></i>
+                            </div>
+                        </a>
+
+                        <p class="footer__description">
+                            Önerilerin bizim için önemli
+                            <a href="" class="footer__privacy">Güvenlik Politikası</a>
+                        </p>
+                    </form>
+            </div>    
+          <div class="footer__content grid">
+              <div class="footer__social">
+                        <a href="https://tr-tr.facebook.com/" target="_blank" class="footer__social-link">
+                            <i class="ri-facebook-fill"></i>
+                  </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                            <i class="ri-instagram-fill"></i>
+                    </a>
+                  
+              </div>
+
+              <span class="footer__copy">
+                  Tüm Hakları Saklıdır | CupCafe by Ece Şahin
+              </span>
+          </div>
+        </div>
+        </div>
+    </footer>
+    <script>
+
+
+        function kullaniciEkle() {
+            var email = document.getElementById("Email").value;
+            var sifre = document.getElementById("Sifre").value;
+            var url = "/AnaSayfa/KullaniciEkle/?email=" + email + "&sifre=" + sifre;
+            window.location.href = url;
+        }
+
+    </script>
+    </body>
+    </html>

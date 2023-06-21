@@ -1,0 +1,68 @@
+﻿@model Cupcafe.Service.Models.KullaniciUrun
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, " />
+
+    <link rel="shortcut icon" href="" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <link href="~/css/style.css" rel="stylesheet" />
+    <title>İşlem</title>
+</head>
+<body>
+
+    <section class="menu section" id="menu">
+
+        <div class="menu__container container">
+
+
+            <h2 class="section__title">
+                Kullanıcı İşlemleri
+            </h2>
+            <div class="menu__form grid kullaniciIslem">
+
+                <form id="urunForm" method="post" action="/KullaniciIslem/IslemSayfa" class="menu__form grid">
+
+                    <input type="hidden" id="Id" name="Id" placeholder="Id">
+
+                    <div class="kullaniciIslem__div">
+                        <label class="kullaniciIslem__lbl">Kullanıcı Email:</label>
+                        <select asp-for="Kullanici.Id" asp-items="@ViewBag.dgr1" class="kullaniciIslem__form"></select>
+
+
+                   </div>
+
+
+                    <div class="kullaniciIslem__div">
+                        <label class="kullaniciIslem__lbl">Ürün:</label>
+                        <select asp-for="Urun.Id" asp-items="@ViewBag.dgr2" class="kullaniciIslem__form"></select>
+
+                    </div>
+
+
+                    <div class="kullaniciIslem__div">
+                        <label class="kullaniciIslem__lbl">İşlem:</label>
+                        <select asp-for="Islem.Id" asp-items="@ViewBag.dgr3" class="kullaniciIslem__form"></select>
+
+
+                    </div class="kullaniciIslem__div">
+
+                    <button class="button kullaniciIslem__button" type="submit">Kaydet</button>
+
+
+                </form>
+               
+            </div>
+        </div>
+       </section>
+</body>
+</html>

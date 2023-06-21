@@ -1,0 +1,188 @@
+﻿
+@{
+    ViewData["Title"] = "AnaSayfa";
+    Layout = "~/Views/Shared/_LayoutCafe.cshtml";
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, " />
+
+    <link rel="shortcut icon" href="" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link href="~/css/style.css" rel="stylesheet" />
+    <title>CupCafe</title>
+</head>
+<body>
+
+    <main class="main">
+        <seciton class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h3 class="home__subtitle">
+                        CupCafe Özenle Sunar
+                    </h3>
+
+                    <h1 class="home__title">
+                        Bir Bardak Kahve?
+                        <img src="https://i.hizliresim.com/ors9scn.png"/>
+                    </h1>
+
+                    <p class="home__description">
+                        Harika bir kahveye mi ihtiyacınız var? Doğru adrestesiniz. Biribirinden ehşiz yoğun kahve tadıyla hizmetinizdeyiz.
+
+                    </p>
+                   
+                    <a href="~/Giris/Login" class="button">
+                        Giriş Yap <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                </div>
+
+
+                <img src="https://i.pinimg.com/564x/de/70/e9/de70e97e57073ccc141876099df293ee.jpg" alt="home image" class="home__img" />
+            </div>
+
+        </seciton>
+
+        <section class="products" id="products">
+
+            <div class="products__bg section">
+                <div class="products__container container grid">
+                    <div class="products__data">
+                        <a href="#about" class="products__button" >
+                           Devamı  <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                         <p class="products__description">
+                            Egzotik bölgelerden nadir kahve çekirdeklerini özenle topladık ve Milano Roastry’de ustalıkla kavurduk. Her fincan kahve ayrı bir hikaye demek ve belki de bu hikayenin bir daha tekrarı yok!
+                        </p>
+                    </div>
+                    <div class="products__content">
+                        <article class="products__card">
+                            <img src="https://i.pinimg.com/564x/77/4f/34/774f3498aa2d3fea624a556a055f42a0.jpg" class="products__img" />
+                            <h3 class="products__name">
+                           Colombia Coffe
+                       </h3>
+                            <span class="products__price">450 TL</span>
+                        </article>
+                        <article class="products__card">
+                            <img src="https://i.pinimg.com/564x/5d/82/73/5d8273053ba614770d948e312ef34bfa.jpg" class="products__img" />
+                            <h3 class="products__name">
+                                Ollie Food
+                            </h3>
+                            <span class="products__price">400 TL</span>
+                        </article>
+
+                        <article class="products__card">
+                            <img src="https://i.pinimg.com/564x/ec/c0/84/ecc0844dfe5456ffc23d8613e7b850fe.jpg" class="products__img" />
+                            <h3 class="products__name">
+                                Superfood Shakes
+                            </h3>
+                            <span class="products__price">470 TL</span>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+
+            <div class="about__bg section">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title">
+                            Hakkımızda
+                        </h2>
+                        <p class="about__description">
+                            CupCafe 2023 yılında Ankara’da kurulmuştur. Türkiye’nin ilk yeni nesil gurme kahve mağazalarından CupCafe’de yüksek nitelikli kahveler, yeşil çekirdek olarak ithal edilir, kavurulur ve misafirlerin beğenisine sunulur. Tüm pastacılık ürünleri kendi üretim bandında yapılmaktadır.
+
+                        </p>
+                    </div>
+                    <img src="https://i.pinimg.com/564x/85/23/cb/8523cb8b6e9e23fb0a7a473d1576cfb0.jpg" class="about__img" />
+                </div>
+            </div>
+        </section>
+
+        <section class="steps" id="steps">
+            <div class="steps__bg section">
+                <h2 class="section__title">
+                    Ürünlerimizin üretim aşaması
+                </h2>
+
+                <div class="steps__container container grid">
+                    <img src="https://i.hizliresim.com/qmzk2v5.png" class="steps__bg-img" />
+                    <div class="steps__content">
+                        <div class="steps__card">
+                            <div class="steps__circle">
+                            <div class="steps__subcircle">
+                                01
+                            </div>
+                                <img src="https://i.hizliresim.com/78pze08.png" class="steps__img" />
+                            </div>
+                        <p class="steps__description">
+                            Hasat her yıl kahve olgunlaştığında gerçekeşir. Kahve taneleri olgunlaşır ve işlenmek toplanır.
+                        </p>
+                        </div>
+
+                        <div class="steps__card steps__card-move">
+                            <div class="steps__circle">
+                                <div class="steps__subcircle">
+                                    02
+                                </div>
+                                <img src="https://i.hizliresim.com/7r1ykoo.png" class="steps__img" />
+                            </div>
+                            <p class="steps__description">
+                                Kahve taneleri ıslah veya kuru olarak kurutulur. Terch edilen tekniğe göre tadı değişir.
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__circle">
+                                <div class="steps__subcircle">
+                                    03
+                                </div>
+                                <img src="https://i.hizliresim.com/h99huxa.png" class="steps__img" />
+                            </div>
+                            <p class="steps__description">
+                                Kahve çekirdekleri kavrulur ve kahve elde edilir. İşlenerek daha lezzetli hale getirilir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </section>
+
+        <section class="testimonial" id="testimonal">
+            <div class="testimonial__bg section">
+                <div class="testimonial__container container grid">
+                    <div class="testimonial__data">
+                        <h2 class="section__title">
+                            Kahve odaklanmayı arttırmak için sabahları içilebilecek en iyi içecek.
+                        </h2>
+
+                        <span class="testimonial__name">
+                            Ece Şahin
+                        </span>
+                    </div>
+                    <img src="https://i.pinimg.com/564x/87/a5/34/87a5346ce77f8e80f7f5113a99169339.jpg" class="testimonial__img"/>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/scrollreveal.min.js"></script>
+   
+   
+</body>
+
+
+
+
+</html>

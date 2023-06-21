@@ -1,0 +1,129 @@
+﻿@using Cupcafe.Service.Models
+@model List<Urun>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, " />
+
+    <link rel="shortcut icon" href="" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="~/css/style.css" rel="stylesheet" />
+    <title>Menu</title>
+</head>
+<body>
+
+    <section class="menu section" id="menu">
+
+        <div class="menu__container container">
+
+           
+            <h2 class="section__title">
+                Harika Lezzetli Menümüz
+            </h2>
+            <div class="menu__form grid">
+                <form id="urunForm" action="post" class="menu__form grid">
+
+                    <input type="hidden" id="Id" name="Id" placeholder="Id">
+                    <input type="text" id="Adi" name="Adi" placeholder="Ürün Adı" >
+                    <input type="text" id="Fiyati" name="Fiyati" placeholder="Ürün Fiyatı" >
+                    <input type="text" id="Foto" name="Foto" placeholder="Fotoğraf Link">
+
+
+
+                </form>
+                <div class="menu__button-ayar">
+                    <a href="#" onclick="menuEkle()">
+                        <div class="button kaydet__button" type="submit">
+                            Ekle
+                        </div>
+                    </a>
+                    <a href="#" onclick="menuGuncelle()">
+                        <div class="button kaydet__button" type="submit">
+                            Güncelle
+                        </div>
+                    </a>
+
+                    <a href="/KullaniciIslem/IslemSayfa">
+                        <div class="button kaydet__button" type="submit">
+                            Kullanici İşemleri
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="menu__container container">
+
+            <div class="menu__content grid">
+                @foreach (var x in Model)
+                {
+                    <article class="menu__card">
+                        <div class="menu__shape" id="menuCard-@x.Id" onclick="fillForm('@x.Id','@x.Adi', '@x.Fiyati','@x.Foto')">
+                            <img src="@x.Foto" class="menu__img" />
+                        </div>
+                        <div class="menu__data">
+                            <h2 class="menu__price">
+                                @x.Adi
+                            </h2>
+                            <h3 class="menu__name">
+                                @x.Fiyati
+                            </h3>
+
+                            <a href="/Menu/MenuSil/@x.Id">
+
+                                <div class="button menu__button">
+                                    <i>Sil</i>
+                                </div>
+                            </a>
+
+
+                        </div>
+                    </article>
+                }
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function fillForm(id, adi, fiyati, foto) {
+            document.getElementById("Id").value = id;
+            document.getElementById("Adi").value = adi;
+            document.getElementById("Fiyati").value = fiyati;
+
+            document.getElementById("Foto").value = foto;
+        }
+
+        function menuEkle() {
+
+            var adi = document.getElementById("Adi").value;
+            var fiyati = document.getElementById("Fiyati").value;
+            var foto = document.getElementById("Foto").value;
+
+
+            var url = "/Menu/MenuEkle/?adi=" + adi + "&fiyati=" + fiyati + "&foto=" + foto;
+            window.location.href = url;
+
+        }
+        function menuGuncelle() {
+            var id = document.getElementById("Id").value;
+            var adi = document.getElementById("Adi").value;
+            var fiyati = document.getElementById("Fiyati").value;
+            var foto = document.getElementById("Foto").value;
+
+            var url1 = "/Menu/MenuGuncelle/?id=" + id + "&adi=" + adi + "&fiyati=" + fiyati + "&foto=" + foto ;
+
+            window.location.assign(url1);
+
+        }
+
+    </script>
+</body>
+</html>
